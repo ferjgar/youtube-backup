@@ -1,0 +1,13 @@
+{
+  "name": "youtube-backup",
+  "description": "we'll see",
+  "version": "0.0.1",
+  "author": "Fernando García (http://ferjgar.rocks)",
+  "license": "MIT",
+  "homepage": "https://github.com/ferjgar/youtube-backup",
+  "bugs": "https://github.com/ferjgar/youtube-backup/issues",
+  "repository": "ferjgar/youtube-backup",
+  "dependencies": {
+    "googleapis": "^5.2.1"
+  }
+}
