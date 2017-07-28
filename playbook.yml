@@ -1,0 +1,25 @@
+---
+- hosts: all
+  become: yes
+
+  tasks:
+    - name: Install EPEL repository
+      yum:
+        name: https://dl.fedoraproject.org/pub/epel/epel-release-latest-{{ ansible_distribution_major_version }}.noarch.rpm
+        state: present
+
+    - name: Install yarn repository
+      get_url:
+        url: https://dl.yarnpkg.com/rpm/yarn.repo
+        dest: /etc/yum.repos.d/yarn.repo
+        force: yes
+
+    - name: Install nodejs
+      yum:
+        name: nodejs
+        state: latest
+
+    - name: Install yarn
+      yum:
+        name: yarn
+        state: latest

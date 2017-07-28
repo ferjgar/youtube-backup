@@ -3,3 +3,5 @@ node_modules
 npm-debug.log
 .google-api-config.json
 .DS_Store
+playbook.retry
+yarn.lock
