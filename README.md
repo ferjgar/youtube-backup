@@ -5,6 +5,9 @@ vagrant vxx
 virtualbxo vxxx
 ansible min v.2.1
 
+# usage
+`node lib/index.js` (improve this...)
+
 # troubles
 doing vagrant up you can get an error mounting the shared folders because the guest Centos OS doesnt have the VirtualBox Guest Additions installed
 mount: unknown filesystem type 'vboxsf'
