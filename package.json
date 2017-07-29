@@ -18,15 +18,14 @@
     "youtube-backup": "lib/index.js"
   },
   "dependencies": {
-    "commander": "^2.9.0",
-    "googleapis": "^5.2.1",
-    "inquirer": "^1.0.3"
+    "googleapis": "^20.1.0",
+    "inquirer": "^3.2.1"
   },
   "devDependencies": {
-    "eslint": "^2.10.2",
-    "eslint-config-airbnb-base": "^3.0.1",
-    "eslint-plugin-import": "^1.8.0",
+    "eslint": "^4.3.0",
+    "eslint-config-airbnb-base": "^11.3.1",
+    "eslint-plugin-import": "^2.7.0",
     "faucet": "0.0.1",
-    "tape": "^4.5.1"
+    "tape": "^4.7.0"
   }
 }
