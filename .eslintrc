@@ -2,5 +2,9 @@
   "extends": "airbnb-base",
   "parserOptions": {
     "ecmaVersion": 6
+  },
+  "rules": {
+    // c'mon, we're doing a cli app here!
+    "no-console": 0
   }
 }
