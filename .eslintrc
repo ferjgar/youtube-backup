@@ -5,6 +5,8 @@
   },
   "rules": {
     // c'mon, we're doing a cli app here!
-    "no-console": 0
+    "no-console": 0,
+    // eslint wants it, but it break code sometimes, so ¯\_(ツ)_/¯
+    "comma-dangle": 0,
   }
 }
