@@ -1,5 +1,4 @@
-# Youtube Backup
-![Build Status](https://travis-ci.org/ferjgar/youtube-backup.svg?branch=master)
+# Youtube Backup [![Build Status](https://travis-ci.org/ferjgar/youtube-backup.svg?branch=master)](https://travis-ci.org/ferjgar/youtube-backup)
 
 ## Setup
 vagrant vxx
