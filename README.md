@@ -18,3 +18,6 @@ to solve it you can you can use the plugin `vagrant plugin install vagrant-vbgue
 using yarn on windows over vagrant and a shared folder, it can´t use symlinks, so it may fail witjh something like
 `EPROTO: protocol error, symlink '../acorn/bin/acorn' -> '/var/www/node_modules/acorn-jsx/node_modules/.bin/acorn'`
 solution: use `yarn --no-bin-links`
+
+line endings CRLF -> LF, nightmaare, you need to force it by local git congif or repo based witrh the file.gitaatributes
+https://help.github.com/articles/dealing-with-line-endings/
