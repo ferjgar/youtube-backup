@@ -1,23 +1,34 @@
-# Youtube Backup [![Build Status](https://travis-ci.org/ferjgar/youtube-backup.svg?branch=master)](https://travis-ci.org/ferjgar/youtube-backup)
-
-## Setup
-vagrant vxx
-virtualbxo vxxx
-ansible min v.2.1
+## Requirements
+- [node.js](https://nodejs.org) (tested on `v6.11.1`)
+- [youtube-dl](https://rg3.github.io/youtube-dl/)
+- unix (it will probably work on windows, but it's untested)
 
 ## Usage
-`node lib/index.js` (improve this...)
+`npm install -g youtube-backup`
+
+or symply
+
+`node lib`
 
 ## Vagrant
-doing vagrant up you can get an error mounting the shared folders because the guest Centos OS doesnt have the VirtualBox Guest Additions installed
-mount: unknown filesystem type 'vboxsf'
-under some combinations (vagrant version, virtual box version, box version, etc..) it will just fail, is not going to mount the shared folder
-older versions of virtualbox coulnd inbstall automatically the VB guest additions if not found/are not updated
-to solve it you can you can use the plugin `vagrant plugin install vagrant-vbguest` to do the dirty job
+On the root path, you can run `vagrant up` to fire a clean `Centos 7` VM with a basic [Ansible](https://www.ansible.com/) provision.
 
-using yarn on windows over vagrant and a shared folder, it can´t use symlinks, so it may fail witjh something like
-`EPROTO: protocol error, symlink '../acorn/bin/acorn' -> '/var/www/node_modules/acorn-jsx/node_modules/.bin/acorn'`
-solution: use `yarn --no-bin-links`
+If you `vagrant ssh`, it should work out of the box, and you will have a nice environment to use this.
 
-line endings CRLF -> LF, nightmaare, you need to force it by local git congif or repo based witrh the file.gitaatributes
-https://help.github.com/articles/dealing-with-line-endings/
+But, as someone coding on windows and mac, I know that problems will happen.
+Some are solved here (at this moment...), new will arise in the future for sure, the combination of software versions, host OSs,
+virtualization providers, shared folders... is a real madness.
+As always, Google is your friend.
+
+Some examples (mainly for my own future reference):
+
+- `Centos 7` comes clean, no guest additions, so depending on the software you're using you need to manually install them in order to shared folders to work.
+If you're using [VirtualBox](https://www.virtualbox.org/), `vagrant plugin install vagrant-vbguest` is a nice option.
+
+- VirtualBox doesn't like symlinks on windows, so using `yarn` or `npm install` will fail. You need to add the param `--no-bin-links` in order to work.
+
+- Probably related with the above, `npm test` will fail on windows because it can't find `eslint` on the path. You'd want to `npm install -g eslint` on guest.
+
+- Line endings! CRLF/LF!! just commit a `.gitaatributes` file and enforce it at repo level (https://help.github.com/articles/dealing-with-line-endings).
+
+[![Build Status](https://travis-ci.org/ferjgar/youtube-backup.svg?branch=master)](https://travis-ci.org/ferjgar/youtube-backup)
