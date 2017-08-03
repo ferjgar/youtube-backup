@@ -6,7 +6,7 @@
 ## Usage
 `npm install -g youtube-backup`
 
-or symply
+or simply
 
 `node lib`
 
