@@ -1,7 +1,7 @@
 ## Requirements
-- [node.js](https://nodejs.org) (tested on `v6.11.1`)
-- [youtube-dl](https://rg3.github.io/youtube-dl/)
-- unix (it will probably work on windows, but it's untested)
+- **node.js** (tested on `v6.11.1`)
+- **youtube-dl** (tested on `v2017.07.30.1`)
+- **unix** (it will probably work on windows, but it's untested)
 
 ## Usage
 `npm install -g youtube-backup`
